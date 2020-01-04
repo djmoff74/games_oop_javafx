@@ -76,7 +76,7 @@ public class Logic {
             int countHor = 0;
             if (table[row][row] == 1) {
                 for (int cell = 0; cell <table.length; cell++) {
-                    if (table[row][cell] == 1) {
+                    if (table[row][cell] == 1 && countVer != row) {
                         countHor++;
                     } else if (table[cell][row] == 1) {
                         countVer++;
