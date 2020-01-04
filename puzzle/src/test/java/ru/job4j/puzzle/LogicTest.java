@@ -43,6 +43,23 @@ public class LogicTest {
     }
 
     @Test
+    public void whenHorizontaFirstlWin() {
+        Logic logic = new Logic(5) {
+            @Override
+            public int[][] convert() {
+                return new int[][] {
+                        {1, 1, 1, 1, 1},
+                        {0, 0, 0, 0, 0},
+                        {0, 0, 0, 0, 0},
+                        {0, 0, 0, 0, 0},
+                        {0, 0, 0, 0, 0},
+                };
+            }
+        };
+        assertThat(logic.isWin(), is(true));
+    }
+
+    @Test
     public void whenNotWin() {
         Logic logic = new Logic(5) {
             @Override
