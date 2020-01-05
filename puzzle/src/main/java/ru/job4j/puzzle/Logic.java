@@ -85,8 +85,8 @@ public class Logic {
                 }
                 if (countHor == table.length || countVer == table.length) {
                     result = true;
+                    break;
                 }
-                break;
             }
         }
         return result;
