@@ -34,6 +34,11 @@ public class BishopBlackTest {
         Cell[] expected = new Cell[]{Cell.D2, Cell.E3, Cell.F4, Cell.G5};
         Assert.assertArrayEquals(expected, bishopBlack.way(Cell.C1, Cell.G5));
     }
+    @Test
+    public void wayCheckAvailableCellsMoveBack() {
+        Cell[] expected = new Cell[]{Cell.F4, Cell.E3, Cell.D2, Cell.C1};
+        Assert.assertArrayEquals(expected, bishopBlack.way(Cell.G5, Cell.C1));
+    }
 
     @Test(expected = IllegalStateException.class)
     public void whenNotCorrectCells() {
